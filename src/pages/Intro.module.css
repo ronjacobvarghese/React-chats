@@ -1,0 +1,41 @@
+.intro-header{
+  width:100%;
+  padding:0.4rem 2rem;
+  background-color: var(--nav-color);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.361);
+  z-index: 10;
+}
+
+.intro-content{
+  height:100%;
+  display:flex;
+  text-align: center;
+  padding:1rem 1.5rem;
+  align-items: center;
+  font-size:1.5rem;
+  background-color: var(--primary-color);
+}
+
+.intro-content section{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  gap:2rem;
+  font-weight:bold;
+}
+
+
+.intro-content > section img{
+  width:180px;
+  height:180px;
+}
+
+.intro-actions{
+  background-color: var(--primary-color);
+  width:100%;
+  padding:2rem 1rem;
+  text-align:center;
+  position: relative;
+}
+

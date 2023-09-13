@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector, useDispatch } from "react-redux";
+
+import "./App.css";
+import IntroPage from "./pages/Intro";
+import ChatPage from "./pages/Chat";
+import { directPage } from "./store/chats-slice";
+import ExitPage from "./pages/Exit";
 
 function App() {
+  const dispatch = useDispatch();
+  const page = useSelector((state) => state.chats.page);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {page === "intro" && (
+        <IntroPage onEnroll={() => dispatch(directPage("chats"))} />
+      )}
+      {page === "chats" && <ChatPage />}
+      {page === "final" && <ExitPage />}
     </div>
   );
 }

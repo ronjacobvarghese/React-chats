@@ -1,0 +1,21 @@
+.chat-header{
+  background-color: var(--primary-color);
+  display:flex;
+  padding:1.5rem 1rem;
+}
+
+.chat-header h2{
+  margin:0 auto;
+}
+
+.chat-header button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  background-color: transparent;
+  border:0;
+  border-radius:100px;
+  width:2.5rem;
+  height:2.5rem;
+}
